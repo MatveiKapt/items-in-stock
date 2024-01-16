@@ -355,13 +355,14 @@ img {
 .popup__close-button {
   position: absolute;
   top: 3%;
-  right: 5%;
+  right: 4%;
 
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
+  padding: 0;
 
   background-color: transparent;
   border: none;
