@@ -38,14 +38,16 @@
     <section class="main__stock-info stock-info">
       <h2 class="visually-hidden">Таблица с информацией о товарах</h2>
 
-      <table class="stock-info__table table">
-        <tr class="table__row" id="head-row">
-          <th>#</th>
-          <th>Title</th>
-          <th>Price, USD</th>
-          <th>Date and time</th>
-        </tr>
-      </table>
+      <div class="stock-info__table-wrapper">
+        <table class="stock-info__table table">
+          <tr class="table__row" id="head-row">
+            <th>#</th>
+            <th>Title</th>
+            <th>Price, USD</th>
+            <th>Date and time</th>
+          </tr>
+        </table>
+      </div>
 
       <button class="stock-info__button button" type="button">New item</button>
     </section>
@@ -61,18 +63,18 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="title-input">Title</label>
-                <input class="form__input" id="title-input" type="text" name="name" placeholder="Title" required>
+                <input class="form__input" id="title-input" type="text" name="name" placeholder="Title" autocomplete="off" required>
               </li>
   
               <li class="form__item">
                 <label class="form__label" for="price-input">Price</label>
-                <input class="form__input" id="price-input" type="number" name="price" step="0.01" placeholder="Price" required>
+                <input class="form__input" id="price-input" type="number" name="price" step="0.01" placeholder="Price" autocomplete="off" required>
                 <span>Invalid price. Format: "00.00"</span>
               </li>
   
               <li class="form__item">
                 <label class="form__label" for="date-input">Date and time</label>
-                <input class="form__input" id="date-input" type="text" name="date" placeholder="DD.MM.YYYY HH:MM:SS" required>
+                <input class="form__input" id="date-input" type="text" name="date" placeholder="DD.MM.YYYY HH:MM:SS" autocomplete="off" required>
                 <span>Invalid date time. Format: "DD.MM.YYYY HH:MM:SS"</span>
               </li>
             </ul>
@@ -120,9 +122,9 @@
   <template id="table-row-template">
     <tr class="table__row">
       <td class="number"></td>
-      <td class="title">Headphones</td>
-      <td class="price">10.00</td>
-      <td class="date">11.01.2011</td>
+      <td class="title"></td>
+      <td class="price"></td>
+      <td class="date"></td>
     </tr>
   </template>
   

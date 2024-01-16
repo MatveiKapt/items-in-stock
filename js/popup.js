@@ -1,6 +1,7 @@
 const openPopupButton = document.querySelector('.stock-info__button');
 const closePopupButtons = document.querySelectorAll('.close-popup');
 const popup = document.querySelector('.popup-background');
+const focusInput = popup.querySelector('input[name="name"]');
 const body = document.querySelector('body');
 
 const OPENED_POPUP_CLASS = 'popup-background--open';
@@ -9,6 +10,7 @@ const ESC_KEY_CODE = 'Escape';
 const openPopup = () => {
   body.classList.add('popup-opened');
   popup.classList.add(OPENED_POPUP_CLASS);
+  focusInput.focus();
 }
 
 const closePopup = () => {

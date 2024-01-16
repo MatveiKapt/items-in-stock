@@ -1,8 +1,9 @@
 const INPUT_INVALID_CLASS = 'form__input--invalid';
 
 const isDateFormatCorrect = (dateTimeStr) => {
-  const regex = /^(0[1-9]|1[0-9]|2[0-9]|3[0,1])\.(0[1-9]|1[0,2])\.([2][0][0-9]{2})\s([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/;
-  return { regex, testResult: regex.test(dateTimeStr)};
+  const regex = /^(0[1-9]|1[0-9]|2[0-9]|3[0,1])\.(0[1-9]|1[0,2])\.([0-9]{4})\s([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/;
+
+  return {regex, testResult: regex.test(dateTimeStr)};
 }
 
 const isDateTimeValid = (day, month, year, hours, minutes, seconds) => {
